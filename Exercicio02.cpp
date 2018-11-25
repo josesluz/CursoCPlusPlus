@@ -1,7 +1,6 @@
-/* EXERCICIO 01
+/* EXERCICIO 02
 
-Escreva um Programa que leia três numeros inteiros e positivos (A, B, C) e calcule a seguinte expressão:
-D=R+S / 2, Onde R = (A + B) ² e S = (B + C)²
+Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e mostre-a expressa apenas em dias.
 
 */
 #include <iostream>
@@ -13,13 +12,14 @@ using std::cin;
 using std::endl;
 
 main(){
-       int A, B, C, D, R, S;
-       cout << "Por favor, informe as medidas dos 3 lados: " << endl;
-       cin >> A >> B >> C;
+       int idade, anos, meses, dias;
+       cout << "Por favor, digite sua idade: " << endl;
+       cin >> idade;
 
-       R=pow((A + B),2);
-       S=pow((B + C),2);
-       D=(R + S)/2;
+      	dias = idade
+	meses = (idade / 12)
+       	S=pow((B + C),2);
+       	D=(R + S)/2;
 
 	if ((A >= 0) && (B >=0) && (C >= 0)){
 	cout << "O calculo referente aos números " << A << " " << B << " " << C << " " << "= " << D << endl;
