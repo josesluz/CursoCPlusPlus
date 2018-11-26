@@ -7,15 +7,19 @@ José Luz - josesluz@gmail.com
 */
 #include <iostream>
 #include <math.h>
+#include <string>
 
 using std::cout;
 using std::cin;
 using std::endl;
+using std::string;
 
 main(){
        int num1, num2, num3, numMaior, numMenor;
-       cout << "Por favor, informe três numeros: " << endl;
-       cin >> num1 >> num2 >> num3;
+       string opcao;
+
+         cout << "Por favor, informe três numeros: " << endl;
+         cin >> num1 >> num2 >> num3;
 
        if ((num1 != num2) && (num1 != num2) && (num1 != num3) && (num2 != num3))  {
       	if ((num1 > num2) && (num1 > num3)) {
@@ -31,11 +35,21 @@ main(){
         } if ((num3 < num1) && (num3 < num2)) {
           numMenor = num3;
         }
-        cout << "O numero maior é: " << numMaior << endl;
-        cout << "Números iguais: " << numMenor << endl;
+        cout << "O número maior é: " << numMaior << endl;
+        cout << "O número menor é: " << numMenor << endl;
       } else {
-        cout << "Foram digitados números iguais: " "(" << num1 << " , " << num2 << " , " << num3 << ")," << " repita a operacao " << endl;
+        cout << "Foram digitados números iguais: " "(" << num1 << " , " << num2 << " , " << num3 << ")," << " repita a operação " << endl;
       }
+      cout << "Deseja continuar?  [s] [sim]:\nOu digite qualquer outro cacacter para encerrar." << endl;
+      cin >> opcao;
+      while (opcao == "sim") {
+      cout << "Por favor, informe três numeros: " << endl;
+      cin >> num1 >> num2 >> num3;
+      cout << "Foram digitados números iguais: " "(" << num1 << " , " << num2 << " , " << num3 << ")," << " repita a operação " << endl;
+      cout << "Deseja continuar?  [S] [N]: " << endl;
+      cin >> opcao;
+    }
+      cout << "Fim do programa" << endl;
       return 0;
-//     system("pause");
+//     system("pause")
 }
